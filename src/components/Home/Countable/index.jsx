@@ -13,12 +13,29 @@ class Countable extends Component {
     incrementCount(){
         console.log("Increment function calling...");
 
-        /*state value change -->*/
+        /*state value change + 1 -->*/
         this.setState({
             count: this.state.count + 1
         })
     }
 
+    decrementCount(){
+        console.log("Decrement function calling...");
+
+        /*state value change + 1 -->*/
+        this.setState({
+            count: this.state.count - 1
+        })
+    }
+
+    resetCount(){
+        console.log("reset function calling...");
+
+        /*state value change + 1 -->*/
+        this.setState({
+            count: 0
+        })
+    }
 
     render() {
         return (
@@ -30,11 +47,34 @@ class Countable extends Component {
                 <Button
                     variant="contained"
                     onClick={()=> {
-                        console.log('clicked!')
+                        console.log('Increase button clicked!')
                         this.incrementCount()
                     }}
                 >
                     Increase!
+                </Button>
+
+                <Button
+                    variant="outlined"
+                    onClick={()=> {
+                        console.log('Decrease button clicked!')
+                        this.decrementCount()
+                    }}
+                    style={{marginLeft: '15px'}}
+                >
+                    Decrease!
+                </Button>
+
+                <Button
+                    variant="outlined"
+                    color={"error"}
+                    onClick={()=> {
+                        console.log('Reset button clicked!')
+                        this.resetCount()
+                    }}
+                    style={{marginLeft: '15px'}}
+                >
+                    Reset!
                 </Button>
             </div>
         );
