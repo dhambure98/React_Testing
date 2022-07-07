@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React,{Component} from "react";
 import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 class GDSEButton extends Component{
     // can be used this properties and types
@@ -19,9 +19,9 @@ class GDSEButton extends Component{
     }
 
     // then can't use this prop default value can be used
-    static defaultProps = {
+    static defautlProps = {
         className: "",
-        color: "Primary",
+        color: "primary",
         label: "",
         size: 'medium',
         variant: "contained",
@@ -39,7 +39,7 @@ class GDSEButton extends Component{
 
     renderChildren = (label, children) => {
         if(label) return label;
-        if(children) return children;
+        if(children)  return children;
     }
 
     render() {
