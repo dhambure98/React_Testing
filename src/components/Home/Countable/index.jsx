@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Typography from "@mui/material/Typography";
 import Button from '@mui/material/Button';
+import GDSEButton from "../../common/Button";
 
 class Countable extends Component {
     constructor(props) {
@@ -44,7 +45,8 @@ class Countable extends Component {
                     {/*state value accsess-->*/}
                     Count: {this.state.count}
                 </Typography>
-                <Button
+
+                {/*<Button
                     variant="contained"
                     onClick={()=> {
                         console.log('Increase button clicked!')
@@ -75,7 +77,37 @@ class Countable extends Component {
                     style={{marginLeft: '15px'}}
                 >
                     Reset!
-                </Button>
+                </Button>*/}
+
+                <GDSEButton
+                    label="Increase!"
+                    variant="contained"
+                    onClick={()=> {
+                        console.log('Increase button clicked!')
+                        this.incrementCount()
+                    }}
+                />
+
+                <GDSEButton
+                    label="Decrease!"
+                    variant="outlined"
+                    onClick={()=> {
+                        console.log('Decrease button clicked!')
+                        this.decrementCount()
+                    }}
+                    style={{marginLeft: '15px'}}
+                />
+
+                <GDSEButton
+                    label="Reset!"
+                    variant="outlined"
+                    color="error"
+                    onClick={()=> {
+                        console.log('Reset button clicked!')
+                        this.resetCount()
+                    }}
+                    style={{marginLeft: '15px'}}
+                />
             </div>
         );
     }
