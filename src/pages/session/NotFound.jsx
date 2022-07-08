@@ -4,7 +4,7 @@ import GDSEButton from '../../components/common/Button';
 import not_found from '../../assets/img/NotFound.jpg';
 import { Link } from 'react-router-dom';
 
-// Craeatng styling NotFound window
+// Creating styling NotFound window
 const styleSheet = () => ({
     container: {
         display: 'flex',
