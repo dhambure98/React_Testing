@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { styleSheet } from "./style";
 import TextField from '@mui/material/TextField';
 import GDSEButton from "../../components/common/Button";
+import GDSESnackBar from "../../components/common/SnackBar";
 
 class Login extends Component {
     constructor(props) {
@@ -49,7 +50,7 @@ class Login extends Component {
 
     render() {
         const { classes } = this.props;
-        return(
+        return (
             <div className={classes.container}>
                 <div className={classes.login__cover}>
                     <div className={classes.title__container}>
@@ -90,6 +91,17 @@ class Login extends Component {
                         />
                     </div>
                 </div>
+                <GDSESnackBar
+                    // open variable is true
+                    open={this.state.open}
+                    onClose={() => {
+                        this.setState({ open: false })
+                    }}
+                    message={this.state.message}
+                    autoHideDuration={3000}
+                    severity={this.state.severity}
+                    variant="filled"
+                />
             </div>
         )
     }
