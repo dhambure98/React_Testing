@@ -4,6 +4,7 @@ import Login from "../pages/session/Login";
 import {Routes, Route} from "react-router-dom";
 import NotFound from "../pages/session/NotFound";
 import FlexBoxLayout from "../pages/Layouts/FlexBox";
+import GridLayout from "../pages/Layouts/Grid"
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
         <Routes>
             <Route exact path='/' element={<HomePage/>}/>
             <Route path='login' element={<Login/>}/>
-            <Route path="*" element={<NotFound/>}/>
             <Route path='flex-layout' element={<FlexBoxLayout/>}/>
+            <Route path='grid-layout' element={<GridLayout/>}/>
+            <Route path="*" element={<NotFound/>}/>
         </Routes>
     );
 }
