@@ -31,8 +31,14 @@ class GridLayout extends Component {
                 </Typography>
                 <Grid container spacing={0.5}>
                     <Grid item lg={6} md={6} sm={6} xm={6} >
-                        <TextField id="outlined-basic" placeHolder="Name" label="Customer name" variant="outlined" size="small"
-                                   style={{width: '100%'}} />
+                        <TextField
+                            id="outlined-basic"
+                            placeHolder="Name"
+                            label="Customer name"
+                            variant="outlined"
+                            size="small"
+                            style={{width: '100%'}}
+                        />
                     </Grid>
                     <Grid item lg={6} md={6} sm={6} xm={6}>
                         <Autocomplete
@@ -52,16 +58,30 @@ class GridLayout extends Component {
                         />
                     </Grid>
                     <Grid item lg={6} md={6} sm={6} xm={6} >
-                        <TextField id="outlined-basic" placeHolder="NIC" label="NIC" variant="outlined" size="small"
-                                   style={{width: '100%'}}/>
+                        <TextField
+                            id="outlined-basic"
+                            placeHolder="NIC"
+                            label="NIC"
+                            variant="outlined"
+                            size="small"
+                            style={{width: '100%'}}
+                        />
                     </Grid>
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField id="outlined-basic" placeHolder="address" label="Outlined" variant="outlined" size="small"
-                                   style={{width: '100%'}}
+                        <TextField
+                            id="outlined-basic"
+                            placeHolder="address"
+                            label="Outlined"
+                            variant="outlined"
+                            size="small"
+                            style={{width: '100%'}}
                         />
                     </Grid>
                     <Grid item lg={12} md={12} sm={12} xm={12} style={{display: 'flex'}} justifyContent="flex-end" >
-                        <GDSEButton size="small" variant="contained" label="save"/>
+                        <GDSEButton
+                            size="small"
+                            variant="contained"
+                            label="save"/>
                     </Grid>
                 </Grid>
             </Fragment>

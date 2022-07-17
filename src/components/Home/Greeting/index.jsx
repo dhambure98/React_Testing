@@ -4,6 +4,21 @@ import backgroundIMG from "../../../assets/img/backgroundIMG.png"
 import {styleSheet} from "./style";
 import {withStyles} from "@mui/styles";
 
+/*
+function Welcome(props) {
+    return <h1> Hello, {props.name}</h1>;
+}
+
+// this is function base pass the props
+function Home() {
+    return(
+        <div>
+            <Welcome name = "Akila" />
+        </div>
+    );
+}
+*/
+
 class Greeting extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +31,7 @@ class Greeting extends Component {
             /*<div style={{backgroundColor: 'yellow'}}>  --> don't use like this */
             <div className={classes.container}>
                 <div>
+                    {/*class base props pass -->*/}
                     <Typography variant="h3" gutterBottom component="div">
                         Hello Akila {this.props.name}
                     </Typography>
