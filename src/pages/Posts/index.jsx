@@ -8,8 +8,8 @@ import GDSEButton from "../../components/common/Button";
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import PostService from "../../services/PostService";
 import GDSESnackBar from "../../components/common/SnackBar";
-// import BasicPostTable from "../../components/Posts/Table/BasicTable";
-// import GDSEDataTable from "../../components/common/Table";
+import BasicPostTable from "../../components/Posts/Table/BasicTable";
+import GDSEDataTable from "../../components/common/Table";
 
 class Posts extends Component {
     constructor(props) {
