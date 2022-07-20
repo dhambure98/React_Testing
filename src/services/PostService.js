@@ -1,5 +1,6 @@
 import axios from "../axios";
 
+// component did mount and willunmount
 class PostService {
     createPost = async (data) => {
         console.log("form data: " + data)

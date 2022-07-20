@@ -8,7 +8,7 @@ import GDSEButton from "../../components/common/Button";
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import PostService from "../../services/PostService";
 import GDSESnackBar from "../../components/common/SnackBar";
-import BasicPostTable from "../../components/Posts/Table/BasicTable";
+import BasicPostTable from "../../components/Posts/Table/BasicTable"; 
 import GDSEDataTable from "../../components/common/Table";
 
 class Posts extends Component {
@@ -70,12 +70,13 @@ class Posts extends Component {
 
     async loadData() {
         let res = await PostService.fetchPosts();
+        console.log("row response: " + JSON.stringify(res))
         if (res.status === 200) {
             this.setState({
                 loaded: true,
                 data: res.data
             })
-            console.log("res: " + JSON.stringify(res.data))
+            // console.log("res: " + JSON.stringify(res.data))
 
         } else {
             console.log("fetching error: " + res)
@@ -85,6 +86,8 @@ class Posts extends Component {
     componentDidMount() {
         console.log('Post Screen Mounted!');
         this.loadData();
+
+        console.log(this.state.data)
     }
 
     // componentWillUnmount() {
@@ -95,7 +98,7 @@ class Posts extends Component {
     handleSubmit = async () => {
         console.log('save button clicked!!')
         console.log(this.state.formData)
-        let formData = this.state.formData
+        let formData = this.state.formData  // not compulsory
         let response = await PostService.createPost(formData);
         if (response.status === 201) {
             this.setState({
